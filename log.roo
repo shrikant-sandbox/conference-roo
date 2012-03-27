@@ -43,3 +43,8 @@ finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Sp
 finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Speaker
 quit
 // Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-27 12:32:05
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-03-27 20:30:40
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-27 20:41:33
+finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Speaker
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-27 20:44:31
