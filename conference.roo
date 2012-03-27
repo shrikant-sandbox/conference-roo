@@ -1,0 +1,29 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-14 20:17:34
+project --topLevelPackage com.shri.conference
+persistence setup --database H2_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.domain.Speaker --testAutomatically 
+entity jpa --class ~.domain.Talk --testAutomatically 
+// [failed] field string --fieldName name --notNull --class ~.d
+field string --fieldName name --notNull --class ~.domain.Speaker
+field string --fieldName email --notNull 
+field string --fieldName organizationName
+field set --fieldName talks --type ~.domain.Talk --cardinality ONE_TO_MANY 
+field reference --fieldName speaker --type ~.domain.Speaker --class ~.domain.Talk --notNull 
+web mvc setup
+hint
+hint web mvc
+web mvc all --package ~.web
+selenium test --controller ~.web.SpeakerController 
+// [failed] selenium test --controller ~.web.Talk
+selenium test --controller ~.web.TalkController
+perform test
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-14 20:33:29
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-03-15 21:15:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-15 21:15:37
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-15 21:16:22
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-15 21:24:20
+security setup
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-15 21:27:48

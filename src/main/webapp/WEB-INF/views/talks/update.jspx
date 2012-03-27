@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_shri_conference_domain_Talk" modelAttribute="talk" path="/talks" versionField="Version" z="ZcGDBSb5/vJbf1kNgm3EGTwyP/s=">
+        <field:select field="speaker" id="c_com_shri_conference_domain_Talk_speaker" itemValue="id" items="${speakers}" path="/speakers" required="true" z="KOUien/BSPrU35g42QsTN8CXmTk="/>
+    </form:update>
+</div>

@@ -1,0 +1,45 @@
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 14:00:07
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 14:03:35
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 14:05:47
+project --topLevelPackage com.shri.conference
+persistence setup --database H2_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.domain.Speaker --testAutomatically 
+entity jpa --class ~.domain.Talk --testAutomatically 
+field string --fieldName name --notNull --class ~.domain.Speaker
+field string --fieldName email --notNull 
+field string --fieldName organizationName
+field set --fieldName talks --type ~.domain.Talk --cardinality ONE_TO_MANY 
+field reference --fieldName speaker --type ~.domain.Speaker --class ~.domain.Talk --notNull 
+web mvc setup
+hint
+hint web mvc
+web mvc all --package ~.web
+selenium test --controller ~.web.SpeakerController 
+selenium test --controller ~.web.TalkController
+perform test
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-16 14:06:27
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 14:06:27
+// script --file conference.roo
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-16 14:06:27
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 14:25:42
+security setup
+field string --fieldName password --class ~.domain.Speaker --notNull --sizeMin 6
+finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Speaker
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-16 14:59:05
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 15:21:15
+email sender setup --hostServer smtp.gmail.com --username vashishtha.sk --password pravah --port 587 --protocol SMTP
+field email template --class ~.web.TalkController
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-16 15:31:15
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-16 15:37:33
+web mvc embed video --provider VIMEO --videoId 16069687
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-16 15:37:46
+// Spring Roo 1.1.5.RELEASE [rev d3a68c3] log opened at 2012-03-27 11:45:31
+finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Speaker
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log opened at 2012-03-27 12:31:07
+finder add --finderName findSpeakersByEmailAndPasswordEquals --class ~.domain.Speaker
+quit
+// Spring Roo 1.2.1.RELEASE [rev 6eae723] log closed at 2012-03-27 12:32:05

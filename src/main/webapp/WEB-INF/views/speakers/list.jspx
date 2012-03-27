@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_shri_conference_domain_Speaker" items="${speakers}" z="oQrwK+LJ+5QwN+NpWZzNusnmpIk=">
+        <table:table data="${speakers}" id="l_com_shri_conference_domain_Speaker" path="/speakers" z="cg16xZEBjc+D2g4rxaz1Wp6AwvU=">
+            <table:column id="c_com_shri_conference_domain_Speaker_name" property="name" z="kMQ6Ly0I0A9XUdhK3aS8ZeKND80="/>
+            <table:column id="c_com_shri_conference_domain_Speaker_email" property="email" z="xQKbAHNZ9kU1Nh4o/WQd0Zi8GeE="/>
+            <table:column id="c_com_shri_conference_domain_Speaker_organizationName" property="organizationName" z="qkW+GNbeO9COLT+4i5Q5rC+TCLQ="/>
+            <table:column id="c_com_shri_conference_domain_Speaker_password" property="password" z="HkcYyi6W+KVbZ9wfUbTgb4WVDfQ="/>
+        </table:table>
+    </page:list>
+</div>
